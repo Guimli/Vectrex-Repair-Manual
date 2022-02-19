@@ -1,0 +1,1247 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Vectrex - Manuel de réparation
+\end_layout
+
+\begin_layout Author
+par Nicolas Weill
+\end_layout
+
+\begin_layout Author
+Avec l'aide de Flore Neter
+\end_layout
+
+\begin_layout Author
+Relecture par les membres de l'association MO5
+\end_layout
+
+\begin_layout Date
+Révision du 19 février 2022
+\end_layout
+
+\begin_layout Quote
+Merci d'envoyer vos commentaire, correction ou proposition de traduction
+ sur le Github 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://github.com/Guimli/Vectrex-Repair-Manual"
+target "https://github.com/Guimli/Vectrex-Repair-Manual"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Précaution
+\end_layout
+
+\begin_layout Standard
+Les console Vectrex contiennent un tube cathodique.
+ De hautes tensions sont présentes dans l'équipement électronique, même
+ après arrêt de la console.
+ Ne manipuler pas une Vectrex sans connaissance électronique spécifique.
+\end_layout
+
+\begin_layout Section
+Panne récurente
+\end_layout
+
+\begin_layout Subsection
+Pas de son et pas d'image
+\end_layout
+
+\begin_layout Itemize
+Vérifier l'interrupteur SW301.
+ Cet interrupteur est connu pour se gripper avec les années.
+ Il faut alors ouvrir l'arrière, ajouter du dégrippant et actionner les
+ contacts pour diffuser le dégrimpant.
+ Passer eventuellement du papier de verre sur les contact si vous constatez
+ une oxydation.
+\end_layout
+
+\begin_layout Itemize
+Vérifier le fusible F101.
+ Remplacer le fusible si besoin.
+ Si le fusible saute systématyquement, le cas le plus fréquent de court
+ circuit se situe sur les composant IC101 (LM340), IC102 (7905) et IC401
+ (LM379).
+\end_layout
+
+\begin_layout Subsection
+Pas de son et point blanc
+\end_layout
+
+\begin_layout Itemize
+IC207 (PIA 6522) est le principale responsable des pannes sur la console
+ Vectrex.
+ Le remplacer est toujours la première opération à effectuer.
+\end_layout
+
+\begin_layout Itemize
+L'absence de son indique que l'ensemble processeur, ROM, RAM et PIA ne fonctionn
+e pas correctement.
+ Si le PIA a déjà été remplacé sans succès, la cause la plus probable est
+ une corruption de la ROM IC201 (2363).
+\end_layout
+
+\begin_layout Itemize
+Cas de pannes multiples : Il est possible que plusieurs pannes brouilles
+ l'analyse.
+ Par exemple, une panne partielle de l'interrupteur SW301 pourra interrompre
+ le -13V provoquant un point blanc.
+ Et une panne de l'amplificateur audio IC103 (LM386) pourra provoquer une
+ absence de son.
+\end_layout
+
+\begin_layout Subsection
+Présence de son, mais point blanc
+\end_layout
+
+\begin_layout Itemize
+Vérifier la présence des tensions sur J204 (+5V, -5V, -13V).
+ L'absence de -13V génére un point blanc et peut révéler un problème avec
+ l'interrupteur SW301 ou la diode zener DZ102.
+\end_layout
+
+\begin_layout Itemize
+La cause la plus fréquente de point blanc sur l'écran est une panne de IC207
+ (PIA 6522).
+\end_layout
+
+\begin_layout Itemize
+Il y a de nombreuses pannes pouvant générer un point blanc.
+ Reportez vous aux relevés d'oscilloscope pour corriger les problèmes d'images/p
+oint blanc.
+\end_layout
+
+\begin_layout Subsection
+Autre problème d'image
+\end_layout
+
+\begin_layout Itemize
+Reportez vous aux relevés d'oscilloscope pour corriger les problèmes d'images/po
+int blanc.
+\end_layout
+
+\begin_layout Itemize
+Un problème d'image rare mais difficile a diagnotiquer peut provenir du
+ cable J301.
+ Les contact à l'interieur sont sertis et non soudés.
+ Il est donc possible de voir apparitre de l'oxydation sur les contact ou
+ dans la jonction cable-contact.
+ Ce problème est invisble de l'extéruieur et nécessite de retirer les contacts
+ du cable pour inspection.
+\end_layout
+
+\begin_layout Standard
+Problème rare d'image ce décalant lors des mouvement de l manette : remplacer
+ IC302 (CD4052D).
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Métodologie de réparation
+\end_layout
+
+\begin_layout Standard
+Une approche efficace de diagnotic consiste à diviser le circuit en section
+ et proceder à une analyse par dichotomie.
+\end_layout
+
+\begin_layout Itemize
+Commencer toujours par vérifier le fonctionnement de l'interrupteur SW301.
+ Celui-ci peut-être partiellement défectueux, Les niveaux de tension seront
+ néanmoins correct.
+ Mais une seul des deux bobines du secondaire du transformateur T102 sera
+ exploiter, générant une usure et une surchauffe de plusieurs éléments de
+ l'alimentaion.
+ Incit 
+\end_layout
+
+\begin_layout Itemize
+Commencer par vérifier les niveau de tension sur le connecteur J204.
+\end_layout
+
+\begin_layout Itemize
+Vérifier les broches 3, 6,9 et 10 de IC302 (4052B).
+ Si le signaux de ces brochezs sont incorrects, alors le problème se situe
+ dans la partie numérique de la LogicBoard (IC201 à IC208, IC301 et IC304).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Relevés Oscilloscope
+\end_layout
+
+\begin_layout Standard
+Les relevés d'oscilloscope sont classés par identifiant de composant..
+ Reportez vous au chapitre Métodologie de diagnostic pour 
+\end_layout
+
+\begin_layout Subsection
+IC201 - 2363
+\end_layout
+
+\begin_layout Quote
+Description: ROM interne contenant le programme d'initialisation de la Vectrex,
+ ainsi que le jeu Minestorm.
+\end_layout
+
+\begin_layout Standard
+Une corruption de la ROM peut être détecté par un reset régulier du processeur
+ comme dans le relevé oscilloscope ci-dessous correspondant à une des broches
+ d'adresse du processeur:
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC201/Dead ROM.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il est necessaire de disposer d'une autre ROM déjà programmé pour remplacer
+ IC201.
+ Il est possible de remplacer la ROM par une EPROM de type 27C64.
+\end_layout
+
+\begin_layout Standard
+La lecture du contenu de la ROM dans un programmeur composanttble doit retourner
+ les checksums 7931, B796 ou 7ADB.
+ Les différentes version de ROM sont interchangeables dans les différentes
+ version de Vectrex.
+ La version la plus réçente, et donc a préféré, est la version dont le checksum
+ est 7ADB.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC202 - 74LS00
+\end_layout
+
+\begin_layout Standard
+Description: Quadruple porte NAND
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1, 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin1.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Les broches 1 & 2 sont connectés à la broche 34 du processeur IC206 (broche
+ Enable).
+ Une absence de signal sur cette broche indique un problème avec le processeur.
+ Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin3.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les broches 1 et 2 de IC202.
+ Si les signaux sont correct, remplacer IC202.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4 et 5
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin4.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Les broches 4 et 5 soint connectées aux ligneq d'adresseq A15 et A14 du
+ processeur IC206.
+ Elles devraient toujours être a un niveau de tension de 4V sauf en cas
+ d'utilisation d'une cartouche de jeu.
+ Si ce n'est pas le cas, vérifier XTAL201, et remplacer IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin6.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Cette broche est connectée a la broche OE (Output Enable) de la ROM IC201.
+ Elles devraient toujours être a un niveau de tension de 0V sauf en cas
+ d'utilisation d'une cartouche de jeu.
+ Si ce n'est pas le cas, vérifier les briches 4 et 5 de IC202.
+ Remplacer IC202 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7
+\end_layout
+
+\begin_layout Standard
+Masse, 0V
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin8.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin1.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La broche 9 est connectés à la broche 34 du processeur IC206 (broche Enable).
+ Une absence de signal sur cette broche indique un problème avec le processeur.
+ Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin10.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin11.bmp
+	width 100text%
+	BoundingBox 25bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La broche 13 est connectés à la broche 34 du processeur IC206 (broche Enable).
+ Une absence de signal sur cette broche indique un problème avec le processeur.
+ Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14
+\end_layout
+
+\begin_layout Standard
+Alimentation +5V continu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC203 - 74LS32
+\end_layout
+
+\begin_layout Standard
+Description: Quadruple porte OR
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/74LS32_FR.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin1.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin2.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin3.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin4.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 5
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin5.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin6.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7
+\end_layout
+
+\begin_layout Standard
+Masse, 0V
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin8.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin9.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin10.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin11.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14
+\end_layout
+
+\begin_layout Standard
+Alimentation +5V continu.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC204, IC205 - 2114
+\end_layout
+
+\begin_layout Standard
+RAM
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC206 - 68A09
+\end_layout
+
+\begin_layout Standard
+CPU
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC207 - 6522
+\end_layout
+
+\begin_layout Standard
+Extension de port pour processeur 68A09
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC208 - AY-3-8912
+\end_layout
+
+\begin_layout Standard
+Générateur de son
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC301 - MC-1408P8
+\end_layout
+
+\begin_layout Standard
+Le MC-1408P8 est un convertisseur numérique-analogique 8 bits.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC302 - 4052B
+\end_layout
+
+\begin_layout Standard
+Le CD4052 est un double multiplexeur/démultiplexeur.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/CD4052B.png
+	width 60text%
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le premier multiplexeur prend en entré (broche 13) le signal en provenence
+ du DAC IC301.
+ Et redirige ces signaux en fonction des besoins vers les broches 11 (son
+ digitalisé), 12 (signal vidéo vertical), 14 (?) et 15 (intensité de l'image).
+\end_layout
+
+\begin_layout Standard
+Le second multiplexeur est utilisé pour sélectionner le potentiomètre des
+ manettes analogique (broche 1, 2, 4 et 5) qui devra être lu (broche 3).
+ L'analyse de ces broches est donc inutile pour corriger un problème d'image
+ de la Vectrex.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les signaux sur les broches 5 à 12
+ de IC301 (MC-1408P8), vérifier la présence de la tension -13V sur le cable
+ d'alimetation J204.
+ Si tous ces signaux sont correct, remplacer IC301 et IC304.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin6.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, remplacer IC207 (PIA 6522)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 et 10 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin9.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, remplacer IC207 (PIA 6522)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B et/ou le condensat
+eur C304.
+\end_layout
+
+\begin_layout Itemize
+En cas de signal déformé, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Vérifier la présence de la tension -5V sur le cable d'alientation J204.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 15 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin15.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B et/ou le condensat
+eur C306.
+\end_layout
+
+\begin_layout Itemize
+En cas de signal déformé, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Vérifier la présence de la tension -5V sur le cable d'alientation J204.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B.
+\end_layout
+
+\begin_layout Subsection
+IC305 - 4066B
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin1.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin2.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin3.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin4.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 5 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin5.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin6.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (Alimentation)
+\end_layout
+
+\begin_layout Standard
+-5V
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin8.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin9.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin10.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin11.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (Alimentation)
+\end_layout
+
+\begin_layout Standard
++5V
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
