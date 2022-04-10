@@ -1,0 +1,3730 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+tcolorbox
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+\size huge
+Vectrex - Manuel de réparation
+\end_layout
+
+\begin_layout Author
+par Nicolas Weill
+\begin_inset Newline newline
+\end_inset
+
+avec l'assistance de Flore Netter
+\begin_inset Newline newline
+\end_inset
+
+Remerciement spécial à Pascal, Jeremy et Gérald pour leurs Vectrex
+\begin_inset Newline newline
+\end_inset
+
+Relecture par les membres de l'association MO5
+\end_layout
+
+\begin_layout Date
+Révision du 12 mars 2022
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+*Merci d'envoyer vos commentaires, corrections ou propositions de traduction
+ sur le Github 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://github.com/Guimli/Vectrex-Repair-Manual"
+target "https://github.com/Guimli/Vectrex-Repair-Manual"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Précaution
+\end_layout
+
+\begin_layout New Color Box Type
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
+cBoxB
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+colback=white, colframe=red!75!black, title=#1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Custom Color Box 2
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Risque électrique
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Electric-Shock.png
+	width 10text%
+
+\end_inset
+
+ Les consoles Vectrex contiennent un tube cathodique.
+ De hautes tensions sont présentes dans l'équipement électronique, même
+ après l'arrêt de la console.
+ Ne manipuler pas une Vectrex sans les connaissances électrique spécifiques
+ requises.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Panne récurente
+\end_layout
+
+\begin_layout Subsection
+Pas de son et pas d'image
+\end_layout
+
+\begin_layout Itemize
+Vérifier l'interrupteur SW301.
+ Cet interrupteur est connu pour se gripper avec les années.
+ Il faut alors ouvrir l'arrière, ajouter du dégrippant et actionner les
+ contacts pour diffuser le dégrimpant.
+ Passer eventuellement du papier de verre sur les contact si vous constatez
+ une oxydation.
+\end_layout
+
+\begin_layout Itemize
+Vérifier le fusible F101.
+ Remplacer le fusible si besoin.
+ Si le fusible saute systématiquement, les cas les plus fréquents de court
+ circuit se situent sur les composant IC101 (LM340), IC102 (7905) et IC401
+ (LM379).
+\end_layout
+
+\begin_layout Subsection
+Pas de son et point blanc
+\end_layout
+
+\begin_layout Itemize
+IC207 (PIA 6522) est le principale responsable des pannes sur la console
+ Vectrex.
+ Le remplacer est toujours la première opération à effectuer.
+\end_layout
+
+\begin_layout Itemize
+L'absence de son indique que l'ensemble processeur, ROM, RAM et PIA ne fonctionn
+e pas correctement.
+ Si le PIA a déjà été remplacé sans succès, la cause la plus probable est
+ une corruption de la ROM IC201 (2363).
+\end_layout
+
+\begin_layout Itemize
+Cas de pannes multiples : Il est possible que plusieurs pannes brouilles
+ l'analyse.
+ Par exemple, une panne partielle de l'interrupteur SW301 pourra interrompre
+ le -13V provoquant un point blanc.
+ Et une panne de l'amplificateur audio IC103 (LM386) pourra provoquer une
+ absence de son.
+\end_layout
+
+\begin_layout Subsection
+Présence de son, mais point blanc
+\end_layout
+
+\begin_layout Itemize
+Vérifier la présence des tensions sur J204 (+5V, -5V, -13V).
+ L'absence de -13V génére un point blanc et peut révéler un problème avec
+ l'interrupteur SW301 ou la diode zener DZ102.
+\end_layout
+
+\begin_layout Itemize
+La cause la plus fréquente de point blanc sur l'écran est une panne de IC207
+ (PIA 6522).
+\end_layout
+
+\begin_layout Itemize
+Il y a de nombreuses pannes pouvant générer un point blanc.
+ Reportez vous aux relevés d'oscilloscope pour corriger les problèmes d'images/p
+oint blanc.
+\end_layout
+
+\begin_layout Subsection
+Autre problème d'image
+\end_layout
+
+\begin_layout Itemize
+Reportez vous aux relevés d'oscilloscope pour corriger les problèmes d'images/po
+int blanc.
+\end_layout
+
+\begin_layout Itemize
+Un problème d'image rare mais difficile à diagnotiquer peut provenir du
+ cable J301.
+ Les contacts à l'interieur sont sertis et non soudés.
+ Il est donc possible de voir apparitre de l'oxydation sur les contact ou
+ dans la jonction cable-contact.
+ Ce problème est invisble de l'extéruieur et nécessite de retirer les contacts
+ du cable pour inspection.
+\end_layout
+
+\begin_layout Itemize
+Problème rare d'image se décalant lors des mouvements de la manette : remplacer
+ IC302 (CD4052D).
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Métodologie de réparation
+\end_layout
+
+\begin_layout Standard
+Une approche efficace de diagnotic consiste à diviser le circuit en section
+ et proceder à une analyse par dichotomie.
+\end_layout
+
+\begin_layout Itemize
+Commencer toujours par vérifier le fonctionnement de l'interrupteur SW301.
+ Celui-ci peut-être partiellement défectueux.
+ Les niveaux de tensions seront néanmoins correct.
+ Mais une seule des deux bobines du secondaire du transformateur T102 sera
+ exploité, générant une usure et une surchauffe de plusieurs éléments de
+ l'alimentaion.
+ Ainci qu'une instabillité plus grande sur les niveaux de tension.
+ Ce qui générera des vibration de l'image.
+\end_layout
+
+\begin_layout Itemize
+Vérifier les niveau de tension sur le connecteur J204.
+\end_layout
+
+\begin_layout Itemize
+Vérifier les broches 3, 6,9 et 10 de IC302 (4052B).
+ Si le signaux de ces brochezs sont incorrects, alors le problème se situe
+ dans la partie numérique de la LogicBoard (IC201 à IC208, IC301 et IC304).
+\end_layout
+
+\begin_layout Section
+Schématique
+\end_layout
+
+\begin_layout Subsection
+PowerBoard
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename Schematic/PowerBoard B&W.pdf
+	extra LaTeX "fitpaper"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+LogicBoard
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename Schematic/LogicBoard 3GE B&W.pdf
+	extra LaTeX "fitpaper"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+CRT Board
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename Schematic/CRTBoard B&W.pdf
+	extra LaTeX "fitpaper"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Relevés Oscilloscope
+\end_layout
+
+\begin_layout Standard
+Les relevés d'oscilloscope sont classés par identifiant de composant..
+ Reportez vous au chapitre Métodologie de diagnostic pour ...
+\end_layout
+
+\begin_layout Subsection
+IC201 - 2363
+\end_layout
+
+\begin_layout Description
+Description: ROM interne contenant le programme d'initialisation de la Vectrex,
+ ainsi que le jeu Minestorm.
+\end_layout
+
+\begin_layout Standard
+Une corruption de la ROM peut être détecté par un reset régulier du processeur
+ comme dans le relevé oscilloscope ci-dessous correspondant à une des broches
+ d'adresse du processeur:
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC201/Dead ROM.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il est necessaire de disposer d'une autre ROM déjà programmée pour remplacer
+ IC201.
+ Il est possible de remplacer la ROM par une EPROM de type 27C64.
+\end_layout
+
+\begin_layout Standard
+La lecture du contenu de la ROM dans un programmeur compatible doit retourner
+ les checksums 7931, B796 ou 7ADB.
+ Les différentes versions de ROM sont interchangeables dans les différentes
+ versions de Vectrex.
+ La version la plus réçente, et donc à préférer, est la version dont le
+ checksum est 7ADB.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (VPP)
+\end_layout
+
+\begin_layout Standard
+Tension de programmation.
+ Connecté au +5V logique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 à 10, 21, 23, 24,25 (A0 à A12)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 8-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 à 13 et 15 à 19 (D0 à D7)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 24-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse logique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 20 (
+\begin_inset Formula $\overline{\textrm{ChipEnable}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC202 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC202 6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 22 (
+\begin_inset Formula $\overline{\textrm{OutputEnable}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC202 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC202 8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 27 (
+\begin_inset Formula $\overline{\textrm{PGM}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Utilisé pour la programmation de la PROM en usine.
+ Connecté au +5V logique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 28 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation, +5V logique.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC202 - 74LS00
+\end_layout
+
+\begin_layout Description
+Description: Quadruple porte NAND
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 et 2 (Porte 1 entrée - Enable)
+\end_layout
+
+\begin_layout Standard
+Les broches 1 & 2 sont connectés à la broche 34 du processeur IC206 (broche
+ Enable).
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (Porte 1 sortie - 
+\begin_inset Formula $\overline{\textrm{Enable}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC202 3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin3.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les broches 1 et 2 de IC202.
+ Si les signaux sont correct, remplacer IC202.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4 et 5 (Porte 2 entrée - A14 et A15)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 22-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Porte 2 sortie - 
+\begin_inset Formula $\overline{\textrm{ROMS}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC202 6"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cette broche est connectée a la broche OE (Output Enable) de la ROM IC201.
+ Elles devraient toujours être a un niveau de tension de 0V sauf en cas
+ d'utilisation d'une cartouche de jeu.
+ Si ce n'est pas le cas, vérifier les briches 4 et 5 de IC202.
+ Remplacer IC202 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse, 0V
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8 (Porte 3 sortie - 
+\begin_inset Formula $\overline{\textrm{ROMOE}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC202 8"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin8.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 (Porte 3 entrée - Enable)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La broche 9 est connectés à la broche 34 du processeur IC206 (broche Enable).
+ Une absence de signal sur cette broche indique un problème avec le processeur.
+ Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10 (Porte 3 entrée - A13)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin10.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 (Porte 4 sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin11.bmp
+	width 100text%
+	BoundingBox 25bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12 (Porte 4 entrée - A11)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (Porte 4 entrée - Enable)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La broche 13 est connectés à la broche 34 du processeur IC206 (broche Enable).
+ Une absence de signal sur cette broche indique un problème avec le processeur.
+ Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation +5V continu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC203 - 74LS32
+\end_layout
+
+\begin_layout Description
+Description: Quadruple porte OR
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/74LS32_FR.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (Porte 1 entrée - 
+\begin_inset Formula $\overline{\textrm{Enable}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC202 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC202 3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 (Porte 1 entrée - A15)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin2.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (Porte 1 sortie - 
+\begin_inset Formula $\overline{\textrm{CARTS}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin3.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4 (Porte 2 entrée - R
+\begin_inset Formula $\overline{\textrm{W}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 5 (Porte 2 entrée - 
+\begin_inset Formula $\overline{\textrm{RAMS}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC203 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC203 8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Porte 2 sortie - RAM_R
+\begin_inset Formula $\overline{\textrm{W}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC203 6"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin6.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse logique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8 (Porte 3 sorite - 
+\begin_inset Formula $\overline{\textrm{RAMS}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC203 8"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin8.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 (Porte 3 entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin9.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10 (Porte 3 entrée - 
+\begin_inset Formula $\overline{\textrm{IOS}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC203 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC203 11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 (Porte 4 sortie - 
+\begin_inset Formula $\overline{\textrm{IOS}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC203 11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin11.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12 (Porte 4 entrée - 
+\begin_inset Formula $\overline{\textrm{ROMS}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC202 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC202 6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (Porte 4 entrée - A13)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC203/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation +5V logique.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC204, IC205 - 2114
+\end_layout
+
+\begin_layout Description
+Description: RAM 1K
+\begin_inset Formula $\textrm{\times}$
+\end_inset
+
+4bits, 300ns
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 à 7, 15, 16, 17 (A0 à A9)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 8-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8 (
+\begin_inset Formula $\overline{\textrm{ChipSelect}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC203 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC203 8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse logique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10 (
+\begin_inset Formula $\overline{\textrm{WriteEnable}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC203 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC203 6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 à 14 (DA à DD)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 24-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 18 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation +5V logique.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC206 - 68A09
+\end_layout
+
+\begin_layout Description
+Decription: Processeur 8bits cadencé à 1,5 MHz
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse logique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 (
+\begin_inset Formula $\overline{\textrm{NMI}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Cette broche devrait être a +5V, sauf en cas d'utilisation de certaines
+ cartouches de jeu spécifique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (
+\begin_inset Formula $\overline{\textrm{IRQ}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC206 21"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cette broche devrait être a +5V, sauf en cas d'utilisation de certaines
+ cartouches de jeu spécifique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4 (
+\begin_inset Formula $\overline{\textrm{FIRQ}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Cette broche devrait être a +5V, sauf en ca d'appuie sur le bouton 4 de
+ la manette de droite.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation +5V logique.
+\end_layout
+
+\begin_layout Subsubsection
+Broches 8 à 21 (A0 à A13)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC206 8-21"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC206/Pin8.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broches 22 et 23 (A14 et A15)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC206 22-23"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC202/pin4.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ces broches devraient toujours être à un niveau de tension de 4V, sauf en
+ cas d'utilisation d'une cartouche de jeu.
+ Si ce n'est pas le cas, vérifier XTAL201, C210 et C222, et remplacer IC206
+ si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broches 24 à 31 (D0 à D7)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC206 24-31"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC206/pin31.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 32 (R
+\begin_inset Formula $\overline{\textrm{W}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC206 32"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC206/pin32.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 33 
+\begin_inset Formula $(\overline{\textrm{DMA}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Cette broche est connecté au +5V logique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 34 (Enable)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC206 34"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC206/pin34.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Une absence de signal sur cette broche indique un problème avec le processeur.
+ Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 35 (Q)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC206/pin35.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 36 (MReady)
+\end_layout
+
+\begin_layout Standard
+Cette broche est connecté au +5V logique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 37 (
+\begin_inset Formula $\overline{\textrm{Reset}}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC206 37"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Réinitialise IC206, IC207 et IC208.
+ Actif sur un niveau bas.
+\end_layout
+
+\begin_layout Itemize
+Cette broche devrait être a +5V sauf si vous appuyez sur le bouton Reset.
+ Si ce n'est pas le cas, remplacer C228, C224, C229 et D201.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 38 (ExTal)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC206/pin38.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Le quartz étant un composant sensible, cette mesure nécessite de postionner
+ votre sonde d'oscilloscope en mode 10X.
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, remplacer Y201, C210, C222.
+ Puis remplacer IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 39 (XTal)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC206/pin39.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Le quartz étant un composant sensible, cette mesure nécessite de postionner
+ votre sonde d'oscilloscope en mode 10X.
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, remplacer Y201, C210, C222.
+ Puis remplacer IC206 si nécessaire.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 40 (
+\begin_inset Formula $\overline{\textrm{Halt}}$
+\end_inset
+
+)
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC207 - 6522
+\end_layout
+
+\begin_layout Description
+Decription: Extension de port pour processeur 68A09
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse logique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 à 9 (PA0 à PA7)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC207 2-9"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC301/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10 (PB0)
+\end_layout
+
+\begin_layout Standard
+Voir IC302 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC302 6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 et 12 (PB1 & PB2)
+\end_layout
+
+\begin_layout Standard
+Voir IC302 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC302 9-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (PB3)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC207 13"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC207/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (PB4)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC207 14"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC207/pin14.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 15 (PB5)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC207/pin15.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 16 (PB6)
+\end_layout
+
+\begin_layout Standard
+Cette broche devrait être a +5V, sauf en cas d'utilisation de certaines
+ cartouches de jeu spécifique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 17 (PB7)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC207/pin17.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 19 (CB2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC207/pin19.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 20 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation +5V logique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 21 
+\begin_inset Formula $(\overline{\textrm{IRQB}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 22 (R
+\begin_inset Formula $\overline{\textrm{W}}$
+\end_inset
+
+B)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 23 (
+\begin_inset Formula $\overline{\textrm{CS2B}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC203 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC203 11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 24 (CS1)
+\end_layout
+
+\begin_layout Standard
+Voir IC201 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 8-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 25 (Enable)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 26 à 33 (D0 à D7)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 24-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 34 (
+\begin_inset Formula $\overline{\textrm{Reset}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 35 et 38 (A0 à A3)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 8-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 39 (CA2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC207/pin39.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 40 (CA1)
+\end_layout
+
+\begin_layout Description
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC208 - AY-3-8912
+\end_layout
+
+\begin_layout Description
+Description: Générateur de son
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1, 4 et 5 (CHC, CHB, CHA)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation, +5V logique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse logique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 à 14 (IOA0 à IOA7)
+\end_layout
+
+\begin_layout Standard
+Connecté aux boutons des manettes.
+ En l'absence d'activité des manettes, ces broches devraient retournées
+ +5V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 15 (Clock)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 16 (
+\begin_inset Formula $\overline{\textrm{Reset}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Voir IC206 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC206 37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 17 (A8)
+\end_layout
+
+\begin_layout Standard
+Connecté au +5V logique via R207.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 18 (BDir)
+\end_layout
+
+\begin_layout Standard
+Voir IC207 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC207 14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 19 (BC2)
+\end_layout
+
+\begin_layout Standard
+Connecté au +5V logique via R207.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 20 (BC1)
+\end_layout
+
+\begin_layout Standard
+Voir IC207 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC207 13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 21 à 28 (DA0 à DA7)
+\end_layout
+
+\begin_layout Standard
+Voir IC207 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC207 2-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC301 - MC-1408P8
+\end_layout
+
+\begin_layout Description
+Description: convertisseur numérique-analogique 8 bits.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (Range / Non connecté)
+\end_layout
+
+\begin_layout Standard
+Non utilisé.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 (GND)
+\end_layout
+
+\begin_layout Standard
+Masse analogique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (VEE)
+\end_layout
+
+\begin_layout Standard
+-13V analogique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4 (I
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+OUT
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Il n'est pas possible d'effectuer des mesures fiables sur cette broche.
+ Mesurer IC302 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC302 13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ pour vérifier le fonctionnement de IC301.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 5 à 12 (DA0 à DA7)
+\end_layout
+
+\begin_layout Standard
+Voir IC207 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC207 2-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (VCC)
+\end_layout
+
+\begin_layout Standard
+Alimentation, +5V analogique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (V
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+REF+
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
++5V analogique via R304.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 15 (V
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+REF-
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Masse analogique via R305.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 16 (Compensation)
+\end_layout
+
+\begin_layout Standard
+Environ -10V continu, via C303.
+\end_layout
+
+\begin_layout Description
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IC302 - 4052B
+\end_layout
+
+\begin_layout Description
+Description: double multiplexeur/démultiplexeur.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/CD4052B.png
+	width 60text%
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le premier multiplexeur prend en entré (broche 13) le signal en provenence
+ du DAC IC301.
+ Et redirige ces signaux en fonction des besoins vers les broches 11 (son
+ digitalisé), 12 (signal vidéo vertical), 14 (?) et 15 (intensité de l'image).
+\end_layout
+
+\begin_layout Standard
+Le second multiplexeur est utilisé pour sélectionner le potentiomètre des
+ manettes analogique (broche 1, 2, 4 et 5) qui devra être lu (broche 3).
+ L'analyse de ces broches est donc inutile pour corriger un problème d'image
+ de la Vectrex.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1, 2, 4 et 5 (Y channels In/Out)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (Common Y)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Inhibit)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC302 6"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin6.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, remplacer IC207 (PIA 6522).
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (VEE)
+\end_layout
+
+\begin_layout Standard
+-5V analogique.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8 (VSS)
+\end_layout
+
+\begin_layout Standard
+Masse analogique, 0V.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 et 10 (Select A et B)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC302 9-10"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin9.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, remplacer IC207 (PIA 6522)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 (X Channel 3)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12 (X Channel 0)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B et/ou le condensat
+eur C304.
+\end_layout
+
+\begin_layout Itemize
+En cas de signal déformé, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Vérifier la présence de la tension -5V sur le cable d'alientation J204.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (Common X)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC302 13"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les signaux sur les broches 5 à 12
+ de IC301 (MC-1408P8), vérifier la présence de la tension -13V sur le cable
+ d'alimetation J204.
+ Si tous ces signaux sont correct, remplacer IC301 et IC304.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (X Channel 1)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 15 (X Channel 2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC302/pin15.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B et/ou le condensat
+eur C306.
+\end_layout
+
+\begin_layout Itemize
+En cas de signal déformé, vérifier les signaux sur les broches 6, 9, 10
+ et 13.
+ Vérifier la présence de la tension -5V sur le cable d'alientation J204.
+ Si tous ces signaux sont correct, alors remplacer le CD4052B.
+\end_layout
+
+\begin_layout Subsubsection
+Broche 16 (VDD)
+\end_layout
+
+\begin_layout Standard
+Alimentation, +5V analogique.
+\end_layout
+
+\begin_layout Subsection
+IC303 - LF347
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (Sortie)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4
+\end_layout
+
+\begin_layout Subsubsection
+Broche 5 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (Sortie)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8 (Sortie)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (Sortie)
+\end_layout
+
+\begin_layout Subsection
+IC304 - LF353
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (Sortie)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4
+\end_layout
+
+\begin_layout Subsubsection
+Broche 5 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Entrée)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (Sortie)
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8
+\end_layout
+
+\begin_layout Subsection
+IC305 - 4066B
+\end_layout
+
+\begin_layout Subsubsection
+Broche 1 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin1.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 2 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin2.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 3 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin3.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 4 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin4.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 5 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin5.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 6 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin6.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 7 (VSS)
+\end_layout
+
+\begin_layout Standard
+-5V analogique
+\end_layout
+
+\begin_layout Subsubsection
+Broche 8 (Entrée)
+\end_layout
+
+\begin_layout Standard
+Voir 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC302 13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 9 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin9.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 10 (Sortie)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin10.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 11 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin11.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 12 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin12.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 13 (Entrée)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/IC305/pin13.bmp
+	width 100text%
+	BoundingBox 29bp 81bp 532bp 484bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Broche 14 (VDD)
+\end_layout
+
+\begin_layout Standard
+Alimentation, +5V analogique.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Documentation technique et composant de substitution
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="26" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Référence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nom
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Documentation technique
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC101
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM340
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/gpn/lm340"
+target "https://www.ti.com/lit/gpn/lm340"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM7805
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/gpn/lm7800"
+target "https://www.ti.com/lit/gpn/lm7800"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC102
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM7905
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/gpn/lm79"
+target "https://www.ti.com/lit/gpn/lm79"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC103
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM386-3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/lm386.pdf"
+target "https://www.ti.com/lit/ds/symlink/lm386.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC201
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2363
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+284001-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M27C64
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.mouser.fr/...cd00000519-1204359.pdf"
+target "https://www.mouser.fr/datasheet/2/389/stmicroelectronics_cd00000519-1204359.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC202
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74LS00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/sn5400.pdf"
+target "https://www.ti.com/lit/ds/symlink/sn5400.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC203
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74LS32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/sn54ls32-sp.pdf"
+target "https://www.ti.com/lit/ds/symlink/sn54ls32-sp.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC204
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2114
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://hardware.speccy.org/datasheet/2114.pdf"
+target "https://hardware.speccy.org/datasheet/2114.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TMM314AP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://console5.com/techwiki/.../TMM314APL.pdf"
+target "https://console5.com/techwiki/images/7/7c/TMM314APL.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC205
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2114
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://hardware.speccy.org/datasheet/2114.pdf"
+target "https://hardware.speccy.org/datasheet/2114.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TMM314AP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://console5.com/techwiki/.../TMM314APL.pdf"
+target "https://console5.com/techwiki/images/7/7c/TMM314APL.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC206
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+68A09
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC207
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6522A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC208
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AY3-8912
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://console5.com/.../GI-AY-8910---AY-8912---AY-8913.pdf"
+target "https://console5.com/techwiki/images/f/f5/GI-AY-8910---AY-8912---AY-8913.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC301
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MC1408P8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DAC0808
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/dac0808.pdf"
+target "https://www.ti.com/lit/ds/symlink/dac0808.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC302
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4052B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/cd4051b.pdf"
+target "https://www.ti.com/lit/ds/symlink/cd4051b.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC303
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LF347
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/lf147.pdf"
+target "https://www.ti.com/lit/ds/symlink/lf147.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC304
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LF353
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/lf353.pdf"
+target "https://www.ti.com/lit/ds/symlink/lf353.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC305
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4066B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/ds/symlink/cd4066b-mil.pdf"
+target "https://www.ti.com/lit/ds/symlink/cd4066b-mil.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC401
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM379
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://console5.com/techwiki/images/0/02/LM379.pdf"
+target "https://console5.com/techwiki/images/0/02/LM379.pdf"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC501
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM555
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/gpn/lm555"
+target "https://www.ti.com/lit/gpn/lm555"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NE555
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.ti.com/lit/gpn/ne555"
+target "https://www.ti.com/lit/gpn/ne555"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
