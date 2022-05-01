@@ -10,7 +10,7 @@
 tcolorbox
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language french
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -104,7 +104,7 @@ Relecture par les membres de l'association MO5
 \end_layout
 
 \begin_layout Date
-Révision du 12 mars 2022
+Révision du 02 mai 2022
 \end_layout
 
 \begin_layout Standard
@@ -165,8 +165,6 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-
-\lang french
 Précaution
 \end_layout
 
@@ -433,12 +431,19 @@ Relevés Oscilloscope
 \end_layout
 
 \begin_layout Standard
-Les relevés d'oscilloscope sont classés par identifiant de composant..
+Les relevés d'oscilloscope sont classés par identifiant de composant.
  Reportez vous au chapitre Métodologie de diagnostic pour ...
 \end_layout
 
 \begin_layout Subsection
 IC201 - 2363
+\begin_inset CommandInset label
+LatexCommand label
+name "IC201"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -709,7 +714,7 @@ name "IC202 6"
 Cette broche est connectée a la broche OE (Output Enable) de la ROM IC201.
  Elles devraient toujours être a un niveau de tension de 0V sauf en cas
  d'utilisation d'une cartouche de jeu.
- Si ce n'est pas le cas, vérifier les briches 4 et 5 de IC202.
+ Si ce n'est pas le cas, vérifier les broches 4 et 5 de IC202.
  Remplacer IC202 si nécessaire.
 \end_layout
 
@@ -746,6 +751,13 @@ name "IC202 8"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le signal sur les broche 9 & 10 de
+ IC202.
+ Si le signal des broches 9 & 10 est correct, remplacer IC202.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -788,8 +800,19 @@ Broche 10 (Porte 3 entrée - A13)
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le fonctionnement de IC206 et IC201.
+\end_layout
+
 \begin_layout Subsubsection
 Broche 11 (Porte 4 sortie)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC202 11"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -802,6 +825,13 @@ Broche 11 (Porte 4 sortie)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le signal sur les broche 12 & 13 de
+ IC202.
+ Si le signal des broches 12 & 13 est correct, remplacer IC202.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -820,6 +850,10 @@ Broche 12 (Porte 4 entrée - A11)
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le fonctionnement de IC206 et IC201
+\end_layout
+
 \begin_layout Subsubsection
 Broche 13 (Porte 4 entrée - Enable)
 \end_layout
@@ -836,12 +870,6 @@ noprefix "false"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-La broche 13 est connectés à la broche 34 du processeur IC206 (broche Enable).
- Une absence de signal sur cette broche indique un problème avec le processeur.
- Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
 \end_layout
 
 \begin_layout Subsubsection
@@ -865,16 +893,6 @@ IC203 - 74LS32
 
 \begin_layout Description
 Description: Quadruple porte OR
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename Images/IC203/74LS32_FR.jpg
-	width 100text%
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -915,6 +933,10 @@ Broche 2 (Porte 1 entrée - A15)
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le fonctionnement de IC206 et IC201.
+\end_layout
+
 \begin_layout Subsubsection
 Broche 3 (Porte 1 sortie - 
 \begin_inset Formula $\overline{\textrm{CARTS}}$
@@ -933,6 +955,12 @@ Broche 3 (Porte 1 sortie -
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le signal sur les broche 1 & 2 de IC203.
+ Si le signal des broches 1 & 2 est correct, remplacer IC203.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1006,6 +1034,12 @@ name "IC203 6"
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le signal sur les broche 4 & 5 de IC203.
+ Si le signal des broches 4 & 5 est correct, remplacer IC203.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Broche 7 (GND)
 \end_layout
@@ -1041,16 +1075,25 @@ name "IC203 8"
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le signal sur les broche 9 & 10 de
+ IC203.
+ Si le signal des broches 9 & 10 est correct, remplacer IC203.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Broche 9 (Porte 3 entrée)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename Images/IC203/pin9.bmp
-	width 100text%
-	BoundingBox 29bp 81bp 532bp 484bp
-	clip
+Voir IC202 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC202 11"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -1106,6 +1149,13 @@ name "IC203 11"
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le signal sur les broche 12 & 13 de
+ IC203.
+ Si le signal des broches 12 & 13 est correct, remplacer IC203.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Broche 12 (Porte 4 entrée - 
 \begin_inset Formula $\overline{\textrm{ROMS}}$
@@ -1142,6 +1192,10 @@ Broche 13 (Porte 4 entrée - A13)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le fonctionnement de IC206 et IC201.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1361,6 +1415,24 @@ name "IC206 8-21"
 
 \end_layout
 
+\begin_layout Itemize
+Une absence de signal sur ces broches indique un problème avec le processeur
+ (IC206).
+ Commencer par vérifier la broche 34 (Enable) de IC206, puis vérifier le
+ signal du quartz (Y201).
+ Si le signal est intermitent, voir le paragraphe consacré à 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC201"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 Broches 22 et 23 (A14 et A15)
 \begin_inset CommandInset label
@@ -1414,6 +1486,11 @@ name "IC206 24-31"
 
 \end_layout
 
+\begin_layout Itemize
+Une absence de signal sur ces broches indique un problème avec le processeur
+ (IC206).
+\end_layout
+
 \begin_layout Subsubsection
 Broche 32 (R
 \begin_inset Formula $\overline{\textrm{W}}$
@@ -1439,6 +1516,11 @@ name "IC206 32"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Une absence de signal sur cette broche indique un problème avec le processeur
+ (IC206) ou avec la ROM (IC201).
 \end_layout
 
 \begin_layout Subsubsection
@@ -1478,6 +1560,7 @@ name "IC206 34"
 
 \begin_layout Itemize
 Une absence de signal sur cette broche indique un problème avec le processeur.
+ Une absence de signal sur cette broche indique un problème avec le processeur.
  Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
 \end_layout
 
@@ -1588,6 +1671,11 @@ Broche 40 (
 \end_inset
 
 )
+\end_layout
+
+\begin_layout Standard
+Cette broche n'ai normalement jamais utilisé, sauf avec un PiTrex.
+ Sont niveau de tension devrait toujours êter à +5V.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -1758,6 +1846,13 @@ Broche 17 (PB7)
 
 \begin_layout Subsubsection
 Broche 19 (CB2)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC207 19"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2520,6 +2615,10 @@ Broche 16 (VDD)
 
 \begin_layout Standard
 Alimentation, +5V analogique.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2758,6 +2857,10 @@ Broche 14 (Sortie)
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2879,6 +2982,10 @@ Broche 8
 
 \begin_layout Standard
 Alimentation, +5V analogique.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2903,6 +3010,13 @@ Broche 1 (Entrée)
 
 \begin_layout Subsubsection
 Broche 2 (Sortie)
+\begin_inset CommandInset label
+LatexCommand label
+name "IC305 2"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3024,7 +3138,14 @@ Broche 9 (Sortie)
 \end_layout
 
 \begin_layout Subsubsection
-Broche 10 (Sortie)
+Broche 10 (Sortie) 
+\begin_inset CommandInset label
+LatexCommand label
+name "IC305 10"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3093,6 +3214,10 @@ Broche 14 (VDD)
 
 \begin_layout Standard
 Alimentation, +5V analogique.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3101,6 +3226,14 @@ J301 - Connecteur Vidéo
 
 \begin_layout Subsubsection
 Bleu
+\end_layout
+
+\begin_layout Standard
+Sortie X du signal vidéo.
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3115,8 +3248,32 @@ Bleu
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier R321.
+ Voir IC305 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC305 10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Rouge
+\end_layout
+
+\begin_layout Standard
+Sortie Y du signal vidéo.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3131,8 +3288,32 @@ Rouge
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier R318.
+ Voir IC305 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC305 2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Jaune
+\end_layout
+
+\begin_layout Standard
+Sortie Z (intensité lumineuse) du signal vidéo.
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3145,6 +3326,21 @@ Jaune
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier R315 et D302.
+ Voir IC207 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "IC207 19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -3165,6 +3361,12 @@ Noir
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier le potentimètre/interrupteur de volume
+ facade R326.
+ Vérifier C323 et remplacer le générateur audio (IC208) si nécessaire.
 \end_layout
 
 \begin_layout Standard
