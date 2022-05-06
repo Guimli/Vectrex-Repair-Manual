@@ -169,7 +169,6 @@ Précaution
 \end_layout
 
 \begin_layout New Color Box Type
-
 \begin_inset Argument 1
 status open
 
@@ -2481,7 +2480,8 @@ Broche 11 (X Channel 3)
 Sortie pour les sons digitalisés.
  Il n'y a pas de son digitalisé dans l'écran de démarrage de la Vectrex
  ou dans le jeu Minestorm.
- La tesion sur cette broche est 0V.
+ Sauf jeu avec son digitalisé, la tension sur cette broche devrait être
+ de 0V.
 \end_layout
 
 \begin_layout Subsubsection
