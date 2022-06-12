@@ -104,7 +104,7 @@ Review by the members of the MO5 association
 \end_layout
 
 \begin_layout Date
-Reviewed on May 02, 2022
+Reviewed on June 13, 2022
 \end_layout
 
 \begin_layout Standard
@@ -2601,7 +2601,7 @@ IC303 - LF347
 \end_layout
 
 \begin_layout Subsubsection
-Pin 1 (Sortie)
+Pin 1 (Output)
 \end_layout
 
 \begin_layout Standard
@@ -2616,8 +2616,17 @@ Pin 1 (Sortie)
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal, check pins 2 and 3 of IC303.
+ If all these signals are correct, then replace C312, then IC303.
+\end_layout
+
+\begin_layout Itemize
+If the signal is distorted, replace C312, IC303 and IC305.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 2 (Entrée)
+Pin 2 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2632,8 +2641,13 @@ Pin 2 (Entrée)
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal, check pins 1 and 3 of IC305.
+ Replace IC305 if necessary.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 3 (Entrée)
+Pin 3 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2659,7 +2673,7 @@ Power supply, +5V analog.
 \end_layout
 
 \begin_layout Subsubsection
-Pin 5 (Entrée)
+Pin 5 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2677,7 +2691,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 6 (Entrée)
+Pin 6 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2695,7 +2709,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 7 (Sortie)
+Pin 7 (Output)
 \begin_inset CommandInset label
 LatexCommand label
 name "IC303 7"
@@ -2717,8 +2731,13 @@ name "IC303 7"
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal or a distorted signal, check pin 12 of IC302.
+ Replace C304, then IC303, then IC305 if necessary.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 8 (Sortie)
+Pin 8 (Output)
 \begin_inset CommandInset label
 LatexCommand label
 name "IC303 8"
@@ -2740,8 +2759,13 @@ name "IC303 8"
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal, check pin 15 of IC302.
+ Replace C306, then IC303 if necessary.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 9 (Entrée)
+Pin 9 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2759,7 +2783,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 10 (Entrée)
+Pin 10 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2785,7 +2809,7 @@ Analog ground, 0V.
 \end_layout
 
 \begin_layout Subsubsection
-Pin 12 (Entrée)
+Pin 12 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2803,7 +2827,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 13 (Entrée)
+Pin 13 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2818,8 +2842,15 @@ Pin 13 (Entrée)
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal or a distorted signal, check the signal on pin 9 of
+ IC305.
+ Replace C313, then IC303 if necessary.
+ Also check C327 and R335.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 14 (Sortie)
+Pin 14 (Output)
 \end_layout
 
 \begin_layout Standard
@@ -2832,6 +2863,14 @@ Pin 14 (Sortie)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+If there is no signal or a distorted signal, check pins 12 and 13 of IC303.
+ Replace C313, then IC303 if necessary.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -2843,7 +2882,7 @@ IC304 - LF353
 \end_layout
 
 \begin_layout Subsubsection
-Pin 1 (Sortie)
+Pin 1 (Output)
 \begin_inset CommandInset label
 LatexCommand label
 name "IC304 1"
@@ -2865,8 +2904,20 @@ name "IC304 1"
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal, check all the signals on IC301, replace C315, then
+ IC301 and IC304 if necessary.
+ Check R302 if necessary.
+\end_layout
+
+\begin_layout Itemize
+A malfunction of components IC302, IC304 and IC305 may also block the signal
+ from IC304.
+ You can remove them while you check the operation of pin 1 of IC304.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 2 (Entrée)
+Pin 2 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2884,7 +2935,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 3 (Entrée)
+Pin 3 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2900,7 +2951,7 @@ Analog ground, 0V.
 \end_layout
 
 \begin_layout Subsubsection
-Pin 5 (Entrée)
+Pin 5 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2918,7 +2969,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 6 (Entrée)
+Pin 6 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2936,7 +2987,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 7 (Sortie)
+Pin 7 (Output)
 \end_layout
 
 \begin_layout Standard
@@ -2949,6 +3000,11 @@ Pin 7 (Sortie)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+If there is no signal or a distorted signal, check pins 5 and 6 of IC304.
+ Replace D301 then IC304 if necessary.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2968,7 +3024,7 @@ IC305 - 4066B
 \end_layout
 
 \begin_layout Subsubsection
-Pin 1 (Entrée)
+Pin 1 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -2983,8 +3039,14 @@ Pin 1 (Entrée)
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal or a distorted signal, check pin 13 of IC305.
+ Check the signal on pin 2 of IC303.
+ Replace C312, then IC305 and IC303 if necessary.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 2 (Sortie)
+Pin 2 (Output)
 \begin_inset CommandInset label
 LatexCommand label
 name "IC305 2"
@@ -3006,8 +3068,14 @@ name "IC305 2"
 
 \end_layout
 
+\begin_layout Itemize
+If there is no signal or a distorted signal, check pin 1 and 13 of IC305.
+ Check the signal on pin 1 and 2 of IC303.
+ Replace C312, then IC305 and IC303 if necessary.
+\end_layout
+
 \begin_layout Subsubsection
-Pin 3 (Sortie)
+Pin 3 (Output)
 \end_layout
 
 \begin_layout Standard
@@ -3023,7 +3091,7 @@ Pin 3 (Sortie)
 \end_layout
 
 \begin_layout Subsubsection
-Pin 4 (Entrée)
+Pin 4 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -3039,7 +3107,7 @@ Pin 4 (Entrée)
 \end_layout
 
 \begin_layout Subsubsection
-Pin 5 (Entrée)
+Pin 5 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -3055,7 +3123,7 @@ Pin 5 (Entrée)
 \end_layout
 
 \begin_layout Subsubsection
-Pin 6 (Entrée)
+Pin 6 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -3079,7 +3147,7 @@ Pin 7 (VSS)
 \end_layout
 
 \begin_layout Subsubsection
-Pin 8 (Entrée)
+Pin 8 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -3097,7 +3165,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 9 (Sortie)
+Pin 9 (Output)
 \end_layout
 
 \begin_layout Standard
@@ -3113,7 +3181,7 @@ Pin 9 (Sortie)
 \end_layout
 
 \begin_layout Subsubsection
-Pin 10 (Sortie) 
+Pin 10 (Output) 
 \begin_inset CommandInset label
 LatexCommand label
 name "IC305 10"
@@ -3136,7 +3204,7 @@ name "IC305 10"
 \end_layout
 
 \begin_layout Subsubsection
-Pin 11 (Entrée)
+Pin 11 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -3152,7 +3220,7 @@ Pin 11 (Entrée)
 \end_layout
 
 \begin_layout Subsubsection
-Pin 12 (Entrée)
+Pin 12 (Input)
 \end_layout
 
 \begin_layout Standard
@@ -3168,7 +3236,7 @@ Pin 12 (Entrée)
 \end_layout
 
 \begin_layout Subsubsection
-Pin 13 (Entrée)
+Pin 13 (Input)
 \end_layout
 
 \begin_layout Standard

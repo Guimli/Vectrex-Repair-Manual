@@ -104,7 +104,7 @@ Relecture par les membres de l'association MO5
 \end_layout
 
 \begin_layout Date
-Révision du 02 mai 2022
+Révision du 13 juin 2022
 \end_layout
 
 \begin_layout Standard
@@ -169,6 +169,7 @@ Précaution
 \end_layout
 
 \begin_layout New Color Box Type
+
 \begin_inset Argument 1
 status open
 
@@ -2641,6 +2642,15 @@ Broche 1 (Sortie)
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les broches 2 et 3 de IC303.
+ Si tous ces signaux sont correct, alors remplacer C312, puis IC303.
+\end_layout
+
+\begin_layout Itemize
+En cas de signal déformé, remplacer C312, IC303 et IC305.
+\end_layout
+
 \begin_layout Subsubsection
 Broche 2 (Entrée)
 \end_layout
@@ -2655,6 +2665,11 @@ Broche 2 (Entrée)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier les broches 1 et 3 de IC305.
+ Remplacer IC305 si nécessaire.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2742,6 +2757,12 @@ name "IC303 7"
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal ou de signal déformé, vérifier la broche 12 de
+ IC302.
+ Remplacer C304, puis IC303, puis IC305 si nécessaire.
+\end_layout
+
 \begin_layout Subsubsection
 Broche 8 (Sortie)
 \begin_inset CommandInset label
@@ -2763,6 +2784,11 @@ name "IC303 8"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier la broche 15 de IC302.
+ Remplacer C306, puis IC303 si nécessaire.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2843,6 +2869,13 @@ Broche 13 (Entrée)
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal ou de signal déformé, vérifier le signal de la
+ broche 9 de IC305.
+ Remplacer C313, puis IC303 si nécessaire.
+ Vérifier également C327 et R335.
+\end_layout
+
 \begin_layout Subsubsection
 Broche 14 (Sortie)
 \end_layout
@@ -2857,6 +2890,12 @@ Broche 14 (Sortie)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal ou de signal déformé, vérifier les broches 12
+ et 13 de IC303.
+ Remplacer C313, puis IC303 si nécessaire.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -2888,6 +2927,19 @@ name "IC304 1"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal, vérifier la totalité des signaux sur IC301,
+ remaplcer C315, puis IC301 et IC304 si nécessaire.
+ Vérifier éventuellement R302.
+\end_layout
+
+\begin_layout Itemize
+Un dysfonctionnement des composants IC302, IC304 et IC305 peuvent également
+ bloquer le signal de IC304.
+ Vous pouvez les retirer le temps de controller le fonctionnement de la
+ broche 1 de IC304.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2976,6 +3028,12 @@ Broche 7 (Sortie)
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal ou de signal déformé, vérifier les broches 5
+ et 6 de IC304.
+ Remplacer D301 puis IC304 si nécessaire.
+\end_layout
+
 \begin_layout Subsubsection
 Broche 8
 \end_layout
@@ -3008,6 +3066,13 @@ Broche 1 (Entrée)
 
 \end_layout
 
+\begin_layout Itemize
+En cas d'absence de signal ou de signal déformé, Vérifier la broche 13 de
+ IC305.
+ Vérifier le signal sur les broches 1 et 2 de IC303.
+ Remplacer C312, puis IC305 et IC303 si nécessaire.
+\end_layout
+
 \begin_layout Subsubsection
 Broche 2 (Sortie)
 \begin_inset CommandInset label
@@ -3029,6 +3094,13 @@ name "IC305 2"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+En cas d'absence de signal ou de signal déformé, Vérifier la broche 1 et
+ 13 de IC305.
+ Vérifier le signal sur la broche 1 et 2 de IC303.
+ Remplacer C312, puis IC305 et IC303 si nécessaire.
 \end_layout
 
 \begin_layout Subsubsection
