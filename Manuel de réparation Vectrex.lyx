@@ -104,7 +104,7 @@ Relecture par les membres de l'association MO5
 \end_layout
 
 \begin_layout Date
-Révision du 06 septembre 2022
+Révision du 27 mars 2023
 \end_layout
 
 \begin_layout Standard
@@ -169,6 +169,7 @@ Précaution
 \end_layout
 
 \begin_layout New Color Box Type
+
 \begin_inset Argument 1
 status open
 
@@ -328,6 +329,19 @@ int blanc.
 \end_layout
 
 \begin_layout Itemize
+Suite a un replacement des condensateurs: ondulation des vecteurs, bourdonnement
+ plus fort que la normale, dissipateur thermique principale sur la carte
+ d'alimentation plus chaud que la normale.
+ Ce problème peut survenir en raison de l'absence de trou métalisé sur les
+ condensateurs C404 et C411.
+ Assurez vous d'avoir déposé de l'étaing sur les deux faces du PCB pour
+ ces condensateurs.
+ Vérifier la continuité entre la masse de la Vectrex et la broche correspodante
+ des condensateurs.
+ 
+\end_layout
+
+\begin_layout Itemize
 Un problème d'image rare mais difficile à diagnotiquer peut provenir du
  cable J301.
  Les contacts à l'interieur sont sertis et non soudés.
@@ -362,17 +376,17 @@ Commencer toujours par vérifier le fonctionnement de l'interrupteur SW301.
  Mais une seule des deux bobines du secondaire du transformateur T102 sera
  exploité, générant une usure et une surchauffe de plusieurs éléments de
  l'alimentaion.
- Ainci qu'une instabillité plus grande sur les niveaux de tension.
- Ce qui générera des vibration de l'image.
+ Ainsi qu'une instabillité plus grande sur les niveaux de tension.
+ Ce qui générera des vibrations de l'image.
 \end_layout
 
 \begin_layout Itemize
-Vérifier les niveau de tension sur le connecteur J204.
+Vérifier les niveaux de tension sur le connecteur J204.
 \end_layout
 
 \begin_layout Itemize
 Vérifier les broches 3, 6,9 et 10 de IC302 (4052B).
- Si le signaux de ces brochezs sont incorrects, alors le problème se situe
+ Si les signaux de ces brochezs sont incorrects, alors le problème se situe
  dans la partie numérique de la LogicBoard (IC201 à IC208, IC301 et IC304).
 \end_layout
 
@@ -753,7 +767,7 @@ name "IC202 8"
 \end_layout
 
 \begin_layout Itemize
-En cas d'absence de signal, vérifier le signal sur les broche 9 & 10 de
+En cas d'absence de signal, vérifier le signal sur les broches 9 & 10 de
  IC202.
  Si le signal des broches 9 & 10 est correct, remplacer IC202.
  
@@ -778,7 +792,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Itemize
-La broche 9 est connectés à la broche 34 du processeur IC206 (broche Enable).
+La broche 9 est connectée à la broche 34 du processeur IC206 (broche Enable).
  Une absence de signal sur cette broche indique un problème avec le processeur.
  Vérifier R216, XTAL201, et remplacer le processeur IC206 si nécessaire.
 \end_layout
@@ -827,7 +841,7 @@ name "IC202 11"
 \end_layout
 
 \begin_layout Itemize
-En cas d'absence de signal, vérifier le signal sur les broche 12 & 13 de
+En cas d'absence de signal, vérifier le signal sur les broches 12 & 13 de
  IC202.
  Si le signal des broches 12 & 13 est correct, remplacer IC202.
  

@@ -104,7 +104,7 @@ Review by the members of the MO5 association
 \end_layout
 
 \begin_layout Date
-Reviewed on September 06, 2022
+Reviewed on Mars 27, 2023
 \end_layout
 
 \begin_layout Standard
@@ -319,6 +319,16 @@ Other image problems
 
 \begin_layout Itemize
 Refer to the scope readings to correct image/white point problems.
+\end_layout
+
+\begin_layout Itemize
+Following a capacitor replacement: vector undulation, buzzing louder than
+ normal, main heatsink on the power supply board hotter than normal.
+ This problem can occur due to the lack of a metallized hole on the C404
+ and C411 capacitors.
+ Ensure that you have applied tin on both sides of the PCB for these capacitors.
+ Check the continuity between the Vectrex ground and the corresponding pin
+ of the capacitors.
 \end_layout
 
 \begin_layout Itemize
